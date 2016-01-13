@@ -15,3 +15,12 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+
+### https://raw.github.com/github/gitignore/ac5cd42a926545287b20fac21621b286831cb74e/Global/redis.gitignore
+
+# Ignore redis binary dump (dump.rdb) files
+
+*.rdb
+
+
