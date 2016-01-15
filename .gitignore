@@ -17,10 +17,15 @@
 .byebug_history
 
 
+# config
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+
 ### https://raw.github.com/github/gitignore/ac5cd42a926545287b20fac21621b286831cb74e/Global/redis.gitignore
 
 # Ignore redis binary dump (dump.rdb) files
 
 *.rdb
-
 
