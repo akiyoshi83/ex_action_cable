@@ -85,11 +85,15 @@ GEM
       deep_merge (~> 1.0.0)
     debug_inspector (0.0.2)
     deep_merge (1.0.1)
+    docker-api (1.24.1)
+      excon (>= 0.38.0)
+      json
     em-hiredis (0.3.0)
       eventmachine (~> 1.0)
       hiredis (~> 0.5.0)
     erubis (2.7.0)
     eventmachine (1.0.9)
+    excon (0.45.4)
     execjs (2.6.0)
     faye-websocket (0.10.2)
       eventmachine (>= 0.12.0)
@@ -205,6 +209,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   config
+  docker-api
   jbuilder (~> 2.0)
   jquery-rails
   mysql2 (>= 0.3.18, < 0.5)

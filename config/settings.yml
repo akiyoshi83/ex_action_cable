@@ -1,0 +1,8 @@
+# Docker config (overwrite at settings.local.yml)
+docker:
+  host: tcp://192.168.99.100:2376
+  scheme: https
+  client_cert: path/to/cert.pem
+  client_key: path/to/key.pem
+  ssl_ca_file: path/to/ca.pem
+
