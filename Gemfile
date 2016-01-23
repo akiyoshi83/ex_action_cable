@@ -28,6 +28,7 @@ gem 'puma'
 # gem 'capistrano-rails', group: :development
 
 gem 'config'
+gem 'i18n-js'
 gem 'docker-api'
 
 group :development, :test do
