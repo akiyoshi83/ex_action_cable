@@ -1,0 +1,21 @@
+<%= form_for source, url: "#" do |f| %>
+  <%= f.hidden_field :id %>
+  <div class="form-group">
+    <div class="form-inline">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+        <%= f.label :language_id %>
+        <%= f.select :language_id, languages.map{|l| [l.name, l.id]}, {}, class: "form-control" %>
+      <button id="save" class="btn btn-default">save</button>
+      <button id="run" class="btn btn-default">run</button>
+    </div>
+  </div>
+  <div class="form-group editor-wrapper">
+    <div id="editor"><%= raw source.code %></div>
+  </div>
+  <div class="form-group outputs">
+    <div id="stdout"></div>
+    <div id="stderr"></div>
+  </div>
+<% end %>

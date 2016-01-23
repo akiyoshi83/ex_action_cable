@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require i18n
 //= require i18n/translations
+//= require bootstrap
+//= require ace-builds/src-min/ace.js
 //= require_tree .

@@ -27,9 +27,16 @@ gem 'puma'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# masterではデオフォルトでscssが使えるように修正されいているらしい。
+gem 'sass-rails', '~> 5.0'
 gem 'config'
 gem 'i18n-js'
 gem 'docker-api'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-ace-builds'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

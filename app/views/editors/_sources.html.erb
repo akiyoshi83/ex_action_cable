@@ -1,0 +1,12 @@
+<ul class="nav nav-sidebar source-list">
+  <% sources.each do |source| %>
+    <li class="source-list-item">
+      <%= link_to "#", data: { source: source.id } do %>
+        <%= content_tag :span, source.name, class: "source-list-item-name" %>
+        <%= content_tag :i, "",
+          class: "glyphicon glyphicon-remove pull-right source-list-item-remove",
+          data: { remove_source: source.id } %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -2,3 +2,28 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+html, body { height: 100%; }
+body {
+  padding-top: 70px;
+}
+.editor-wrapper {
+  position: relative;
+  height: 70vh;
+}
+#editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.outputs {
+  position: relative;
+  height: 30vh;
+}
+.source-list-item .source-list-item-remove {
+  display: none;
+}
+.source-list-item:hover .source-list-item-remove {
+  display: inline-block;
+}

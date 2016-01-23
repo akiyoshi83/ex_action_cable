@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+
+  editors:
+    index:
+      confirm:
+        remove_source: "Remove file. Are you sure?"
+

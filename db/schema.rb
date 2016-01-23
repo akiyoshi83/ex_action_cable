@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160113151635) do
+ActiveRecord::Schema.define(version: 20160117092247) do
+
+  create_table "languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "content",    limit: 65535
@@ -19,4 +25,14 @@ ActiveRecord::Schema.define(version: 20160113151635) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.text     "code",        limit: 65535
+    t.integer  "language_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["language_id"], name: "index_sources_on_language_id", using: :btree
+  end
+
+  add_foreign_key "sources", "languages"
 end
