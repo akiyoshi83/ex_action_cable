@@ -1,24 +1,62 @@
 ## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Ruby & Rails version
 
-Things you may want to cover:
+* Ruby version 2.3.0
+* Rails version 5.0.0.beta1
 
-* Ruby version
+### System dependencies
 
-* System dependencies
+* sqlite
+* redis
 
-* Configuration
+### Configuration
 
-* Database creation
+```bash
+$ cp config/settings.yml config/settings.local.yml
+```
 
-* Database initialization
+Overwrite docker settings.
 
-* How to run the test suite
+How to show docker configuration (if you use docker-machine).
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+$ docker-machine env default
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/path/to/home/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
+# Run this command to configure your shell: 
+# eval "$(docker-machine env default)"
+```
 
-* Deployment instructions
+`config/settings.local.yml` example.
 
-* ...
+```yaml
+docker:
+  host: tcp://192.168.99.100:2376
+  scheme: https
+  client_cert: /path/to/home/.docker/machine/machines/default/cert.pem
+  client_key: /path/to/home/.docker/machine/machines/default/key.pem
+  ssl_ca_file: /path/to/home/.docker/machine/machines/default/ca.pem
+```
+
+### Database creation
+
+```bash
+$ rails db:create
+```
+
+### Database initialization
+
+```bash
+$ rails db:migrate
+$ rails db:seed
+```
+
+### How to run the test suite
+
+### Services (job queues, cache servers, search engines, etc.)
+
+### Deployment instructions
+
