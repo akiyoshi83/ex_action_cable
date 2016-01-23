@@ -24,6 +24,8 @@ en:
 
   editors:
     index:
+      label:
+        new: "NEW SOURCE"
       confirm:
         remove_source: "Remove file. Are you sure?"
 

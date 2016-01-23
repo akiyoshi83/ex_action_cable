@@ -24,6 +24,9 @@ App.editor = App.cable.subscriptions.create "EditorChannel",
   source: (id) ->
     @perform 'source', id: id
 
+  new: ->
+    @perform 'new'
+
   save: (id, name, code, language_id) ->
     @perform 'save', id: id, name: name, code: code, language_id: language_id
 

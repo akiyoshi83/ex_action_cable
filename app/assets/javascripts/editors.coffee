@@ -4,6 +4,17 @@
 $ ->
   App.sourceEditor = App.editor.init id: "editor"
 
+$(document).on 'click', '[data-source]', (event) ->
+  event.preventDefault()
+  id = event.target.dataset.source
+  App.editor.source(id)
+  false
+
+$(document).on 'click', '[data-new-source]', (event) ->
+  event.preventDefault()
+  App.editor.new()
+  false
+
 $(document).on 'click', '#save', (event) ->
   event.preventDefault()
   id = $('#source_id').val()
@@ -13,11 +24,6 @@ $(document).on 'click', '#save', (event) ->
   App.editor.save id, name, code, language_id
   false
 
-$(document).on 'click', '[data-source]', (event) ->
-  event.preventDefault()
-  id = event.target.dataset.source
-  App.editor.source(id)
-  false
 
 $(document).on 'click', '[data-remove-source]', (event) ->
   event.preventDefault()

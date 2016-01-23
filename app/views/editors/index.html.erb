@@ -1,5 +1,8 @@
-<div class="col-sm-3 col-md-2 sidebar" data-source-list>
-  <%= render partial: "sources", object: @sources %>
+<div class="col-sm-3 col-md-2 sidebar">
+  <%= link_to t(".label.new"), "#", class: "btn btn-default", data: { new_source: "" } %>
+  <div data-source-list>
+    <%= render partial: "sources", object: @sources %>
+  </div>
 </div>
 
 <div class="col-sm-9 col-md-10 main" data-editor>

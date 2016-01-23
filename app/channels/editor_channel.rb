@@ -14,6 +14,12 @@ class EditorChannel < ApplicationCable::Channel
     ActionCable.server.broadcast "editor_channel", source: render_editor(source, languages)
   end
 
+  def new
+    source = Source.new
+    languages = Language.all.order(:name)
+    ActionCable.server.broadcast "editor_channel", source: render_editor(source, languages)
+  end
+
   def save(data)
     ActiveRecord::Base.transaction do
       source = Source.find_by_id(data["id"])
